@@ -1,10 +1,8 @@
 "use client";
-import Image from "next/image";
 import Home from "./home/page";
 import PreviousProject from "./previous-project/page";
 import { useState, useEffect, Fragment } from "react";
 import { usePathname } from "next/navigation";
-import styles from "./page.module.css";
 
 export default function Page() {
     const pathname = usePathname();

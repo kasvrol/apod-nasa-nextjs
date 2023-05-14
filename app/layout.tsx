@@ -1,7 +1,8 @@
 import "./globals.css";
-import { Inter } from "next/font/google";
-
-const inter = Inter({ subsets: ["latin"] });
+import { Noto_Sans_JP } from "next/font/google";
+import Header from "./components/header";
+import Footer from "./components/footer";
+const JP = Noto_Sans_JP({ weight: "200", subsets: ["latin"] });
 
 export const metadata = {
     icons: {
@@ -18,7 +19,11 @@ export default function RootLayout({
 }) {
     return (
         <html lang="pt-BR">
-            <body className={inter.className}>{children}</body>
+            <body className={JP.className}>
+                <Header />
+                {children}
+                <Footer />
+            </body>
         </html>
     );
 }
