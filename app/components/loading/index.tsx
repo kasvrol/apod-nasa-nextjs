@@ -1,6 +1,3 @@
-import ReactLoading from "react-loading";
-import planet01 from "../../../public/planet01.png";
-import Image from "next/image";
 import { RingLoader, CircleLoader } from "react-spinners";
 import styles from "../../styles/loading.module.css";
 
