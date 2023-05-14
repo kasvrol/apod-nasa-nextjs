@@ -2,8 +2,8 @@
     display: flex;
     flex-direction: column;
     text-align: justify;
-    margin: 0 1vw 0 1vw;
 }
+
 .TextContainer > p {
     padding: 0 0 1vh 0;
 }

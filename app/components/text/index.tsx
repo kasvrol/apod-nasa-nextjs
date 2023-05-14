@@ -1,6 +1,7 @@
 "use client";
 
 import { TextContainerProps } from "../../utils/interface";
+import Link from "next/link";
 import styles from "../../styles/text.module.css";
 
 const TextContainer: React.FC<TextContainerProps> = ({
@@ -11,7 +12,7 @@ const TextContainer: React.FC<TextContainerProps> = ({
 }) => {
     const renderAuthor = (imageAuthor: string) => {
         if (imageAuthor) {
-            return `Author: ${imageAuthor}`;
+            return `Autoria: ${imageAuthor}`;
         }
     };
 
@@ -20,18 +21,40 @@ const TextContainer: React.FC<TextContainerProps> = ({
             return (
                 <p>
                     Pode-se ver o repositório do antigo projeto em:{" "}
-                    <a href={site}>{site}</a>
+                    <Link href={site}>{site}</Link>
                 </p>
             );
         }
     };
 
+    const renderExplanation = (explanation: string) => {
+        if (explanation.indexOf("\n") !== -1) {
+            const arrayExplanation = explanation.split("\n");
+            return arrayExplanation.map((element: any, index: number) => {
+                return <p key={index}>{element}</p>;
+            });
+        } else {
+            return <p>{explanation}</p>;
+        }
+    };
+
+    const renderDate = (date: string) => {
+        if (date.indexOf("-") !== -1) {
+            console.log(date);
+            const arrayDate = date.split("-");
+            const dateToString = `${arrayDate[2]}/${arrayDate[1]}/${arrayDate[0]}`;
+            return dateToString;
+        } else {
+            return date;
+        }
+    };
+
     return (
-        <div className="TextContainer">
-            <p className="explanation">{explanation}</p>
+        <div className={styles.TextContainer}>
+            {renderExplanation(explanation)}
             {renderSite()}
-            <h2 className="imageAuthor">{renderAuthor(imageAuthor)}</h2>
-            <p className="imageDate">Date: {imageDate}</p>
+            <h2 className={styles.imageAuthor}>{renderAuthor(imageAuthor)}</h2>
+            <p className={styles.imageDate}>Data: {renderDate(imageDate)}</p>
         </div>
     );
 };
