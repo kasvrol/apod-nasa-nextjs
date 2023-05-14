@@ -18,3 +18,8 @@ export interface MediaProps {
     imageEntry: string;
     title: string;
 }
+
+export interface AlertProps {
+    title: string;
+    text: string;
+}
