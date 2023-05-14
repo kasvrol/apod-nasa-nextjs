@@ -2,18 +2,24 @@
 
 import { useEffect, useState } from "react";
 import Alert from "../components/alert";
+import Text from "../components/text";
+import Title from "../components/title";
+import Media from "../components/media";
+import previousProject from "./previous-project.json";
 import { LoadingForPreviousProject } from "../components/loading";
 
 import styles from "../styles/previous-project.module.css";
 
 function PreviousProject() {
-    const [data, setData] = useState<any>(1);
+    const [data, setData] = useState<any>(previousProject);
     const [alert, setAlert] = useState<boolean>(true);
     const [loading, setLoading] = useState<boolean>(true);
 
     useEffect(() => {
-        if (data === "") {
+        const response = previousProject;
+        if (response) {
             setLoading(false);
+            setData(response);
             setAlert(false);
         } else {
             setLoading(false);
@@ -31,7 +37,24 @@ function PreviousProject() {
                 />
             );
         } else {
-            return <p>oi</p>;
+            return (
+                <section className={styles.About}>
+                    <Title imageTitle={data.title} />
+                    <section className={styles.presentation}>
+                        <Media
+                            image={"image"}
+                            imageEntry={data.url}
+                            title={data.title}
+                        />
+                        <Text
+                            explanation={data.explanation}
+                            imageAuthor={data.copyright}
+                            imageDate={data.date}
+                            site={data.site}
+                        />
+                    </section>
+                </section>
+            );
         }
     };
 

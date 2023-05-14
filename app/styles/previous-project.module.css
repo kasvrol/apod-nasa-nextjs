@@ -4,3 +4,21 @@
     justify-content: space-evenly;
     align-items: center;
 }
+
+.About {
+    display: flex;
+    flex-direction: column;
+    padding: 1vh 4vw;
+    text-align: justify;
+    /* align-items: center;
+    justify-content: space-evenly; */
+}
+
+.presentation {
+    display: flex;
+    align-items: flex-start;
+}
+
+.presentation > * {
+    margin-right: 10vw;
+}

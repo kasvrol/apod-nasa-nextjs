@@ -1,0 +1,9 @@
+{
+    "title": "APOD NASA",
+    "explanation": "Projeto criado com a biblioteca JQuery durante o segundo módulo do Bootcamp da Resilia. O sistema requisitava a data do dia ou escolhida pelo usuário para a  API concedida pela NASA e trazia a foto desta data com sua descrição e autor. \n A escolha da data é feita através do input superior. O projeto foi criado em 2021, quando eu comecei a estudar desenvolvimento web. Passei a madrugada com minha amiga Larissa Silva tentando desenvolver esse projeto em JQuery, apenas pela honra, logo que o prazo para entrega já tinha cedido. \n Estava estudando desenvolvimento web a apenas 2 meses. Anteriormente, estudei a linguagem C, mas por apenas um semestre e quando nem imaginava migrar da área da educação para área da tecnologia, ainda em 2018, aos 19 anos quando ainda cursava Licenciatura em Física na UTFPR.",
+    "link": "https://kasvrol.github.io/apod-universo/",
+    "url": "https://user-images.githubusercontent.com/88169439/210279485-7746a012-e368-4ac0-8a0e-e2879d1be8d8.png",
+    "copyright": "Ana Karolina (kasvrol)",
+    "site": "https://github.com/kasvrol/apod-universo",
+    "date": "2021-09-05"
+}
