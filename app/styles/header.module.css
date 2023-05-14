@@ -13,3 +13,7 @@
     -moz-box-shadow: inset 0px -72px 93px -24px rgba(0, 0, 0, 0.88);
     box-shadow: inset 0px -72px 93px -24px rgba(0, 0, 0, 0.88);
 }
+
+.headerLink {
+    padding: 1vh 2vw;
+}

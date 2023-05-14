@@ -1,5 +1,6 @@
 "use client";
 import { useRouter, usePathname } from "next/navigation";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 import styles from "../../styles/header.module.css";
 
@@ -21,20 +22,13 @@ const Header: React.FC = () => {
         }
     }, [pathname]);
 
-    console.log("oii");
-
     return (
         <section className={styles.headerContainer}>
             <h1 className={styles.headerTitle}>
                 APOD NASA - Astronomy Picture Of the Day.
             </h1>
             <section className={styles.headerLink}>
-                <p
-                    className={styles.headerParagraph}
-                    onClick={() => router.push(route)}
-                >
-                    {subtitle}
-                </p>
+                <Link href={route}>{subtitle}</Link>
             </section>
         </section>
     );
