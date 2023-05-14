@@ -1,0 +1,26 @@
+.Alert {
+    width: 70%;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Alert > * {
+    text-align: center;
+}
+
+.AlertTitle {
+    color: red;
+    font-size: 1.5vw;
+    margin-bottom: 2vh;
+}
+
+.AlertText {
+    font-size: 1.3vw;
+}
+
+.AlertContact {
+    font-size: 1vw;
+}
