@@ -1,0 +1,6 @@
+.PreviousProject {
+    min-height: 84vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
