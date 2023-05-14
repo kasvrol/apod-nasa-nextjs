@@ -1,6 +1,18 @@
 .Date {
     display: flex;
     flex-direction: column;
+    height: 100%;
     align-items: center;
-    justify-content: space-evenly;
+    padding: 10vh 1vw 0 0;
+}
+
+.Date {
+    padding: 10vh 1vw 0 0;
+}
+
+@media screen and (max-width: 800px) {
+    .Date {
+        justify-content: space-evenly;
+        padding: 0 3vw 40vh 0;
+    }
 }

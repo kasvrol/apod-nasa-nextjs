@@ -1,3 +1,9 @@
 .image {
     width: 50%;
 }
+
+@media screen and (max-width: 800px) {
+    .image {
+        width: 100%;
+    }
+}
