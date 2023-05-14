@@ -10,7 +10,7 @@ const Media: React.FC<MediaProps> = ({ image, imageEntry, title }) => {
             return (
                 <img
                     src={imageEntry}
-                    className={styles.Image}
+                    className={styles.image}
                     alt={`Imagem sobre ${title}`}
                 />
             );
