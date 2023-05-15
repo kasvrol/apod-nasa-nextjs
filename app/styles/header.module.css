@@ -17,3 +17,12 @@
 .headerLink {
     padding: 1vh 2vw;
 }
+
+@media screen and (max-width: 800px) {
+    .headerContainer {
+        font-size: 1.2vw;
+    }
+    .headerLink {
+        font-size: 1vw;
+    }
+}

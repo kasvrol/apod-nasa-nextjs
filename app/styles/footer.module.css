@@ -10,3 +10,9 @@
     text-align: center;
     font-weight: 200;
 }
+
+@media screen and (max-width: 800px) {
+    .footerContainer {
+        font-size: 1vw;
+    }
+}
