@@ -2,14 +2,25 @@
 
 import styles from "../../styles/media.module.css";
 import ReactPlayer from "react-player";
+import { LoadingForHome } from "../loading";
 import { MediaProps } from "../../utils/interface";
 
 const Media: React.FC<MediaProps> = ({ image, imageEntry, title }) => {
+    const [viewImage, setViewImage] = useState<string>("");
+    const [loading, setLoading] = useState<boolean>(true);
+    
+    useEffect(() => {
+        if(imageEntry){
+        setViewImage(imageEntry)
+        setLoading(false);
+    }
+    }, [imageEntry]);
+    
     const mediaType = (image: string) => {
         if (image === "image") {
             return (
                 <img
-                    src={imageEntry}
+                    src={viewImage}
                     className={styles.image}
                     alt={`Imagem sobre ${title}`}
                 />
@@ -21,7 +32,7 @@ const Media: React.FC<MediaProps> = ({ image, imageEntry, title }) => {
         }
     };
 
-    return <>{mediaType(image)}</>;
+    return <> {loading ? <LoadingForHome /> : mediaType(image)}</>;
 };
 
 export default Media;
