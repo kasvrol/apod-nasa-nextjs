@@ -10,8 +10,6 @@
     flex-direction: column;
     padding: 1vh 4vw;
     text-align: justify;
-    /* align-items: center;
-    justify-content: space-evenly; */
 }
 
 .presentation {
@@ -21,4 +19,10 @@
 
 .presentation > * {
     margin-right: 10vw;
+}
+
+@media screen and (max-width: 800px) {
+    .About {
+        flex-wrap: wrap;
+    }
 }

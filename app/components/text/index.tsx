@@ -40,7 +40,6 @@ const TextContainer: React.FC<TextContainerProps> = ({
 
     const renderDate = (date: string) => {
         if (date.indexOf("-") !== -1) {
-            console.log(date);
             const arrayDate = date.split("-");
             const dateToString = `${arrayDate[2]}/${arrayDate[1]}/${arrayDate[0]}`;
             return dateToString;
