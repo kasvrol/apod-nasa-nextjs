@@ -6,7 +6,7 @@
 
 ## Deploy
 
-<p>O projeto encontra-se <a href="https://apod-nasa-nextjs-kl09u08pq-kasvrol.vercel.app/home">aqui</a></p>
+<p>O projeto encontra-se <a href="https://apod-nasa-nextjs.vercel.app/home">aqui</a></p>
 
 ## Ferramentas
 
