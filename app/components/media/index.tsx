@@ -2,6 +2,7 @@
 
 import styles from "../../styles/media.module.css";
 import ReactPlayer from "react-player";
+import { Fragment, useEffect, useState } from "react";
 import { LoadingForHome } from "../loading";
 import { MediaProps } from "../../utils/interface";
 
@@ -32,7 +33,7 @@ const Media: React.FC<MediaProps> = ({ image, imageEntry, title }) => {
         }
     };
 
-    return <> {loading ? <LoadingForHome /> : mediaType(image)}</>;
+    return <Fragment> {loading ? <LoadingForHome /> : mediaType(image)}</Fragment>;
 };
 
 export default Media;
