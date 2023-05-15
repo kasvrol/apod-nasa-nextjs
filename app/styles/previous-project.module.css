@@ -22,10 +22,10 @@
 }
 
 @media screen and (max-width: 800px) {
+    .PreviousProject{
+        flex-direction: column;
+    }
     .presentation {
-        display: flex;
-        align-items: center;
-        justify-content: space-evenly;
         flex-direction: column;
     }
 }
