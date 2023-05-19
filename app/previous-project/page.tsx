@@ -42,7 +42,7 @@ function PreviousProject() {
                     <Title imageTitle={data.title} />
                     <section className={styles.presentation}>
                         <Media
-                            image={"image"}
+                            imageType={"image"}
                             imageEntry={data.url}
                             title={data.title}
                         />
@@ -50,6 +50,7 @@ function PreviousProject() {
                             explanation={data.explanation}
                             imageAuthor={data.copyright}
                             imageDate={data.date}
+                            imageType={"image"}
                             site={data.site}
                         />
                     </section>
