@@ -14,13 +14,24 @@ const dateEntry: React.FC<DateEntryProps> = ({ inputDay }) => {
         inputDay(date);
     }, [date]);
 
+    const changeDate = (date:string) =>{
+        if (date.indexOf("-") !== -1) {
+            const dateArray = date.split("-");
+            const minDateString = dateArray[0] + dateArray[1] + dateArray[2]
+            const minDateint =parseInt(minDateString)
+            if(minDateint>=19950620){
+                setDate(date)
+            }
+        }
+    }
+
     return (
         <div className={styles.Date}>
             <input
                 type="date"
                 min="1995-06-20"
                 max={maxValue}
-                onChange={(dateChange) => setDate(dateChange.target.value)}
+                onChange={(dateChange) => changeDate(dateChange.target.value)}
             />
         </div>
     );
