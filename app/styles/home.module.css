@@ -47,6 +47,7 @@
 
     .presentation {
         flex-wrap: wrap;
+        flex-direction: column;
     }
 
     .dateChoice {

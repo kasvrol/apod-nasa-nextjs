@@ -6,6 +6,7 @@ export interface TextContainerProps {
     explanation: string;
     imageAuthor: string;
     imageDate: string;
+    imageType: string;
     site: string;
 }
 
@@ -14,7 +15,7 @@ export interface TitleContainerProps {
 }
 
 export interface MediaProps {
-    image: string;
+    imageType: string;
     imageEntry: string;
     title: string;
 }

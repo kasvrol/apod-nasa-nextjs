@@ -5,5 +5,10 @@
 @media screen and (max-width: 800px) {
     .image {
         width: 100%;
+        padding: 1vh 0;
+    }
+
+    .video {
+        padding: 2vh 0;
     }
 }

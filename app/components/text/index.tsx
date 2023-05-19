@@ -3,13 +3,23 @@
 import { TextContainerProps } from "../../utils/interface";
 import Link from "next/link";
 import styles from "../../styles/text.module.css";
+import { useEffect, useLayoutEffect, useState } from "react";
 
 const TextContainer: React.FC<TextContainerProps> = ({
     explanation,
     imageAuthor,
     imageDate,
+    imageType,
     site,
 }) => {
+    const [className, setClassName]=useState<string>("TextContainer")
+
+    useEffect(() => {
+        if(imageType!=="image"){
+            setClassName("TextWithVideo")
+        }
+      },[imageType]);
+
     const renderAuthor = (imageAuthor: string) => {
         if (imageAuthor) {
             return `Autoria: ${imageAuthor}`;
@@ -49,7 +59,7 @@ const TextContainer: React.FC<TextContainerProps> = ({
     };
 
     return (
-        <div className={styles.TextContainer}>
+        <div className={styles[className]}>
             {renderExplanation(explanation)}
             {renderSite()}
             <h2 className={styles.imageAuthor}>{renderAuthor(imageAuthor)}</h2>

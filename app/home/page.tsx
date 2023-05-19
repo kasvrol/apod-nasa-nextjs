@@ -23,12 +23,9 @@ function Home() {
                 setLoading(false);
                 setData(responseJson);
                 setAlert(false);
+                window.scrollTo(0, 0);
             } else {
                 setLoading(false);
-                <Alert
-                    title={"Erro 404"}
-                    text={"A API não está respondendo com a data requisitada"}
-                />;
             }
         })();
     }, [date]);
@@ -54,7 +51,7 @@ function Home() {
                         <Title imageTitle={data.title} />
                         <section className={styles.presentation}>
                             <Media
-                                image={data.media_type}
+                                imageType={data.media_type}
                                 imageEntry={data.url}
                                 title={data.title}
                             />
@@ -62,6 +59,7 @@ function Home() {
                                 explanation={data.explanation}
                                 imageAuthor={data.copyright}
                                 imageDate={data.date}
+                                imageType={data.media_type}
                                 site={""}
                             />
                         </section>

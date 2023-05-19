@@ -4,6 +4,13 @@
     text-align: justify;
 }
 
+.TextWithVideo{
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+    width:36vw;
+}
+
 .TextContainer > p {
     padding: 0 0 1vh 0;
 }
@@ -17,4 +24,10 @@
     text-align: right;
     font-size: 1.1rem;
     margin: 1vh 0;
+}
+
+@media screen and (max-width: 800px) {
+    .TextWithVideo {
+        width: 100%;
+    }
 }
